@@ -41,7 +41,6 @@ def detect_long_hlines(img, w_est, h_est, debug=0):
     # it will fill the area bounded by the contours when thickness<0
 
     # The opposite of 'remove the characters'
-    kernel = np.ones((2, int(w_est * 1.5)), np.uint8)
     img_mask = cv2.dilate(img_mask, kernel, iterations=1)
 
     # img_coarse represent the coarse version of lines
